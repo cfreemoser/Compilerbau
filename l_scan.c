@@ -48,10 +48,10 @@ EXTERN_C_END
 # define yyFirstCh	(yytusChar) '\0'
 # define yyEolCh	(yytusChar) '\12'
 # define yyEobCh	(yytusChar) '\177'
-# define yyDStateCount	38
-# define yyTableSize	725
-# define yyEobState	18
-# define yyDefaultState	19
+# define yyDStateCount	43
+# define yyTableSize	683
+# define yyEobState	23
+# define yyDefaultState	24
 # define yyToClassArraySize	0
 # define STD	1
 # define STR	3
@@ -78,60 +78,45 @@ static	void		yyLess		ARGS ((int));
 
 static	yyCombType	yyComb		[yyTableSize   + 1] = {
 {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   1,   21}, 
-{   1,   20}, {   0,    0}, {   0,    0}, {   3,   21}, {   3,   23}, 
+{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   1,   26}, 
+{   1,   25}, {   0,    0}, {   0,    0}, {   3,   26}, {   3,   28}, 
 {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
 {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
 {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   1,   22}, {   0,    0}, {   1,   27}, 
-{   1,   10}, {   3,   22}, {   0,    0}, {   3,   26}, {   0,    0}, 
-{   1,   37}, {   0,    0}, {   1,   11}, {   1,   11}, {   0,    0}, 
+{   0,    0}, {   0,    0}, {   1,   27}, {   0,    0}, {   1,   32}, 
+{   1,   10}, {   3,   27}, {   0,    0}, {   3,   31}, {   0,    0}, 
+{   1,   42}, {   0,    0}, {   1,   11}, {   1,   11}, {   0,    0}, 
 {   1,   11}, {   1,   12}, {   1,   11}, {   1,    8}, {   1,    8}, 
 {   1,    8}, {   1,    8}, {   1,    8}, {   1,    8}, {   1,    8}, 
-{   1,    8}, {   1,    8}, {   1,    8}, {   5,   21}, {   5,   20}, 
-{   8,   12}, {   0,    0}, {   8,    8}, {   8,    8}, {   8,    8}, 
+{   1,    8}, {   1,    8}, {   1,    8}, {   5,   26}, {   5,   25}, 
+{  16,   21}, {   0,    0}, {  16,   21}, {   0,    0}, {   0,    0}, 
+{   8,   12}, {   1,   20}, {   8,    8}, {   8,    8}, {   8,    8}, 
 {   8,    8}, {   8,    8}, {   8,    8}, {   8,    8}, {   8,    8}, 
-{   8,    8}, {   8,    8}, {  14,   16}, {  15,   14}, {  14,   16}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   5,   22}, {   0,    0}, {   0,    0}, {   5,   35}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   5,   37}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   3,   24}, {  12,   15}, {  12,   15}, {  12,   15}, 
-{  12,   15}, {  12,   15}, {  12,   15}, {  12,   15}, {  12,   15}, 
-{  12,   15}, {  12,   15}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   7,    7}, {   7,    7}, {   7,    7}, 
+{   8,    8}, {   8,    8}, {  17,   16}, {   9,   14}, {  15,   18}, 
+{   0,    0}, {   5,   27}, {   0,    0}, {   0,    0}, {   5,   40}, 
+{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   5,   42}, 
+{  18,    9}, {  20,   15}, {   0,    0}, {   0,    0}, {   0,    0}, 
+{   0,    0}, {   3,   29}, {   0,    0}, {   1,   20}, {  12,   17}, 
+{  12,   17}, {  12,   17}, {  12,   17}, {  12,   17}, {  12,   17}, 
+{  12,   17}, {  12,   17}, {  12,   17}, {  12,   17}, {   0,    0}, 
+{   9,   14}, {  15,   18}, {   7,    7}, {   7,    7}, {   7,    7}, 
 {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
-{   7,    7}, {   7,    7}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {  17,   18}, {  24,   25}, {   7,    7}, 
-{   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
+{   7,    7}, {   7,    7}, {  18,    9}, {  20,   15}, {   0,    0}, 
+{   0,    0}, {   0,    0}, {  22,   23}, {  29,   30}, {   7,    7}, 
 {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
 {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
 {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
 {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
-{  28,   29}, {  29,   30}, {  30,   31}, {  31,   32}, {  32,   33}, 
-{   5,   28}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
+{   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
+{  33,   34}, {  34,   35}, {  35,   36}, {  36,   37}, {  37,   38}, 
+{   5,   33}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
 {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
 {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
 {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
 {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, {   7,    7}, 
-{   7,    7}, {   7,    7}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {  33,   34}, {  35,   36}, {  37,   38}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, {   9,    9}, 
-{   9,    9}, {   9,    9}, {  10,   10}, {  10,   10}, {  10,   10}, 
+{   7,    7}, {   7,    7}, {  10,   10}, {  10,   10}, {  10,   10}, 
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
-{  10,   10}, {  10,   10}, {   0,    0}, {  10,   10}, {  10,   10}, 
+{  10,   10}, {  10,   10}, {  38,   39}, {  10,   10}, {  10,   10}, 
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
@@ -154,7 +139,7 @@ static	yyCombType	yyComb		[yyTableSize   + 1] = {
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
-{  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {   0,    0}, 
+{  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  40,   41}, 
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
@@ -182,7 +167,22 @@ static	yyCombType	yyComb		[yyTableSize   + 1] = {
 {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, {  10,   10}, 
 {  10,   10}, {  10,   10}, {  10,   10}, {  13,   13}, {  13,   13}, 
 {  13,   13}, {  13,   13}, {  13,   13}, {  13,   13}, {  13,   13}, 
-{  13,   13}, {  13,   13}, {  13,   13}, {   0,    0}, {   0,    0}, 
+{  13,   13}, {  13,   13}, {  13,   13}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  42,   43}, {   0,    0}, 
+{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
+{   0,    0}, {   0,    0}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, {  19,   19}, 
+{  19,   19}, {  19,   19}, {  19,   19}, {   0,    0}, {   0,    0}, 
 {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
 {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
 {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
@@ -213,40 +213,34 @@ static	yyCombType	yyComb		[yyTableSize   + 1] = {
 {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
 {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
 {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
-{   0,    0}, 
+{   0,    0}, {   0,    0}, {   0,    0}, {   0,    0}, 
 };
 static	yyCombType *	yyBasePtr	[yyDStateCount + 1] = { 0,
 & yyComb [   0], & yyComb [   0], & yyComb [   4], & yyComb [   0], 
-& yyComb [  49], & yyComb [   0], & yyComb [  64], & yyComb [  14], 
-& yyComb [ 139], & yyComb [ 262], & yyComb [   0], & yyComb [  49], 
-& yyComb [ 470], & yyComb [  29], & yyComb [   4], & yyComb [   0], 
+& yyComb [  49], & yyComb [   0], & yyComb [  64], & yyComb [  19], 
+& yyComb [   0], & yyComb [ 187], & yyComb [   0], & yyComb [  51], 
+& yyComb [ 395], & yyComb [   0], & yyComb [   8], & yyComb [  17], 
+& yyComb [   8], & yyComb [  17], & yyComb [ 405], & yyComb [  22], 
 & yyComb [   0], & yyComb [   0], & yyComb [   0], & yyComb [   0], 
-& yyComb [   0], & yyComb [   0], & yyComb [   0], & yyComb [  94], 
-& yyComb [   0], & yyComb [   0], & yyComb [   0], & yyComb [  38], 
-& yyComb [  42], & yyComb [  38], & yyComb [  47], & yyComb [  45], 
-& yyComb [  97], & yyComb [   0], & yyComb [ 157], & yyComb [   0], 
-& yyComb [ 164], & yyComb [   0], 
+& yyComb [   0], & yyComb [   0], & yyComb [   0], & yyComb [   0], 
+& yyComb [  94], & yyComb [   0], & yyComb [   0], & yyComb [   0], 
+& yyComb [  38], & yyComb [  42], & yyComb [  38], & yyComb [  47], 
+& yyComb [  45], & yyComb [  97], & yyComb [   0], & yyComb [ 273], 
+& yyComb [   0], & yyComb [ 428], & yyComb [   0], 
 };
 static	yyStateRange	yyDefault	[yyDStateCount + 1] = { 0,
-    9,     1,     7,     3,    17,     5,    17,    15,    17,    17, 
-    0,    17,    17,    13,    12,    13,     0,     0,     0,    17, 
-    0,     0,    20,    17,     0,     0,     0,    17,    17,    17, 
-   17,    17,    17,     0,    17,     0,    17,     0, 
+   19,     1,     7,     3,    22,     5,    22,    17,    19,    22, 
+    0,    22,    22,    19,    19,    13,    12,    19,    22,    19, 
+   13,     0,     0,     0,    22,     0,     0,    25,    22,     0, 
+    0,     0,    22,    22,    22,    22,    22,    22,     0,    22, 
+    0,    22,     0, 
 };
 static	yyStateRange	yyEobTrans	[yyDStateCount + 1] = { 0,
     0,     0,     0,     0,     0,     0,     0,     0,     0,    10, 
     0,     0,     0,     0,     0,     0,     0,     0,     0,     0, 
     0,     0,     0,     0,     0,     0,     0,     0,     0,     0, 
-    0,     0,     0,     0,     0,     0,     0,     0, 
+    0,     0,     0,     0,     0,     0,     0,     0,     0,     0, 
+    0,     0,     0, 
 };
 
 # if l_scan_xxMaxCharacter < 256
@@ -357,12 +351,12 @@ static void yyTab1	ARGS ((int yya));
 # define yyTab		yyTab1 (0)
 # define yyTab2(a,b)	yyTab1 (a)
 
-/* line 55 "l.rex" */
+/* line 56 "l.rex" */
 
   # include <stdlib.h>
   # include "rString.h"
 
-/* line 366 "l_scan.c" */
+/* line 360 "l_scan.c" */
 
 # ifndef yySetPosition
 # define yySetPosition l_scan_Attribute.Position.Line = yyLineCount; \
@@ -525,15 +519,15 @@ int l_scan_GetToken ARGS ((void))
    register	yyStateRange *	yyStatePtr;
    register	yytusChar *	yyChBufferIndexReg;
    register	yyCombType * *	yyBasePtrReg = yyBasePtr;
-/* line 60 "l.rex" */
+/* line 61 "l.rex" */
 
  /* user-defined local variables of the generated GetToken routine */
  # define MAX_STRING_LEN 2048
   char string [MAX_STRING_LEN+1]; 
   int len;
-  int nestingCount;
+  int nestingCount; /* comments in comments */
 
-/* line 537 "l_scan.c" */
+/* line 531 "l_scan.c" */
 
 yyBegin:
    yyState		= yyStartState;		/* initialize */
@@ -562,9 +556,15 @@ yyContinue:		/* continue after sentinel or skipping blanks */
 	    (int) (yyChBufferIndexReg - (yytusChar *) l_scan_TokenPtr);
       yyChBufferIndex = yyChBufferIndexReg;
 switch (* -- yyStatePtr) {
+case 14:;
+yySetPosition
+/* line 110 "l.rex" */
+{ return tok_begin_const;
+/* line 564 "l_scan.c" */
+} goto yyBegin;
 case 8:;
 yySetPosition
-/* line 107 "l.rex" */
+/* line 114 "l.rex" */
 {
 	 l_scan_Attribute.int_const.Value = malloc (l_scan_TokenLength+1);
 	 l_scan_GetWord (l_scan_Attribute.int_const.Value);
@@ -573,9 +573,9 @@ yySetPosition
 /* line 574 "l_scan.c" */
 } goto yyBegin;
 case 13:;
-case 15:;
+case 17:;
 yySetPosition
-/* line 114 "l.rex" */
+/* line 121 "l.rex" */
 {
 	 l_scan_Attribute.float_const.Value = malloc (l_scan_TokenLength+1);
 	 l_scan_GetWord (l_scan_Attribute.float_const.Value);
@@ -585,48 +585,48 @@ yySetPosition
 } goto yyBegin;
 case 10:;
 yySetPosition
-/* line 121 "l.rex" */
+/* line 128 "l.rex" */
 {
 	    return tok_comment_const;
 	  
 /* line 593 "l_scan.c" */
 } goto yyBegin;
-case 38:;
+case 43:;
 yySetPosition
-/* line 126 "l.rex" */
+/* line 133 "l.rex" */
 {
 	   yyStart (COM);
 	   nestingCount++;
 	
 /* line 602 "l_scan.c" */
 } goto yyBegin;
-case 36:;
+case 41:;
 yySetPosition
-/* line 132 "l.rex" */
+/* line 139 "l.rex" */
 {
 	    nestingCount--;
 	    if(nestingCount == 0) yyStart(STD);
 	
 /* line 611 "l_scan.c" */
 } goto yyBegin;
-case 34:;
+case 39:;
 yySetPosition
-/* line 137 "l.rex" */
+/* line 144 "l.rex" */
 {
 /* line 617 "l_scan.c" */
 } goto yyBegin;
-case 27:;
+case 32:;
 yySetPosition
-/* line 141 "l.rex" */
+/* line 148 "l.rex" */
 {
 	   yyStart (STR);
 	   len = 0;
 	 
 /* line 626 "l_scan.c" */
 } goto yyBegin;
-case 26:;
+case 31:;
 yySetPosition
-/* line 146 "l.rex" */
+/* line 153 "l.rex" */
 { 
 	    yyStart(STD);
 	    string[len] = '\0';
@@ -638,7 +638,7 @@ yySetPosition
 } goto yyBegin;
 case 7:;
 yySetPosition
-/* line 155 "l.rex" */
+/* line 162 "l.rex" */
 { /* we're inside the string */
           if (len + l_scan_TokenLength+1 >= MAX_STRING_LEN) {
 	    Message ("String zu lang", xxError, l_scan_Attribute.Position);
@@ -649,62 +649,66 @@ yySetPosition
         
 /* line 650 "l_scan.c" */
 } goto yyBegin;
-case 24:;
+case 29:;
 yySetPosition
-/* line 164 "l.rex" */
+/* line 171 "l.rex" */
 {string[len++] = '\\';
 /* line 656 "l_scan.c" */
 } goto yyBegin;
-case 25:;
+case 30:;
 yySetPosition
-/* line 166 "l.rex" */
+/* line 173 "l.rex" */
 {string[len++] = '"';
 /* line 662 "l_scan.c" */
 } goto yyBegin;
-case 23:;
+case 28:;
 yySetPosition
-/* line 168 "l.rex" */
+/* line 175 "l.rex" */
 { Message ("Panic! no linebreaks within a string...", xxFatal, l_scan_Attribute.Position); 
 /* line 668 "l_scan.c" */
 } goto yyBegin;
 case 9:;
+case 15:;
+case 18:;
+case 19:;
+case 20:;
 yySetPosition
-/* line 172 "l.rex" */
+/* line 179 "l.rex" */
 {
 	  l_scan_Attribute.identifier_const.Value = malloc (l_scan_TokenLength+1);
 	  l_scan_GetWord (l_scan_Attribute.identifier_const.Value);
 	  return tok_identifier_const;
 	 
-/* line 678 "l_scan.c" */
+/* line 682 "l_scan.c" */
 } goto yyBegin;
 case 11:;
 yySetPosition
-/* line 179 "l.rex" */
+/* line 186 "l.rex" */
 {
 	  l_scan_Attribute.operator_const.Value = malloc (l_scan_TokenLength+1);
 	  l_scan_GetWord (l_scan_Attribute.operator_const.Value);
 	  return tok_operator_const;
 	
-/* line 688 "l_scan.c" */
+/* line 692 "l_scan.c" */
 } goto yyBegin;
-case 22:;
+case 27:;
 {/* BlankAction */
 while (* yyChBufferIndexReg ++ == ' ') ;
 l_scan_TokenPtr = (yytChar *) -- yyChBufferIndexReg;
 yyState = yyStartState;
 yyStatePtr = & yyStateStack [1];
 goto yyContinue;
-/* line 697 "l_scan.c" */
+/* line 701 "l_scan.c" */
 } goto yyBegin;
-case 21:;
+case 26:;
 {/* TabAction */
 yyTab;
-/* line 702 "l_scan.c" */
+/* line 706 "l_scan.c" */
 } goto yyBegin;
-case 20:;
+case 25:;
 {/* EolAction */
 yyEol (0);
-/* line 707 "l_scan.c" */
+/* line 711 "l_scan.c" */
 } goto yyBegin;
 case 1:;
 case 2:;
@@ -713,39 +717,39 @@ case 4:;
 case 5:;
 case 6:;
 case 12:;
-case 14:;
 case 16:;
-case 17:;
-case 28:;
-case 29:;
-case 30:;
-case 31:;
-case 32:;
+case 21:;
+case 22:;
 case 33:;
+case 34:;
 case 35:;
+case 36:;
 case 37:;
+case 38:;
+case 40:;
+case 42:;
 	 /* non final states */
 	 yyChBufferIndexReg --;			/* return character */
 	 break;
 
-case 19:
+case 24:
 	 yySetPosition
       l_scan_TokenLength   = 1;
 	 yyChBufferIndex = ++ yyChBufferIndexReg;
 	 {
-/* line 68 "l.rex" */
+/* line 69 "l.rex" */
 
   /* What happens if no scanner rule matches the input */
   MessageI ("Panic! Illegal character", xxError, l_scan_Attribute.Position, xxCharacter, (char*)*l_scan_TokenPtr);
 
-/* line 741 "l_scan.c" */
+/* line 745 "l_scan.c" */
 	 }
 	 goto yyBegin;
 
       case yyDNoState:
 	 goto yyBegin;
 
-case 18:
+case 23:
 	 yyChBufferIndex = -- yyChBufferIndexReg; /* undo last state transit */
 	 if (-- l_scan_TokenLength == 0) {		/* get previous state */
 	    yyState = yyStartState;
@@ -829,7 +833,7 @@ case 18:
 	    l_scan_CloseFile ();
 # if yyInitFileStackSize != 0
 	    if (yyFileStackPtr == yyFileStack) {
-/* line 73 "l.rex" */
+/* line 74 "l.rex" */
 
   /* What should be done if the end-of-input-file has been reached? */
 
@@ -849,7 +853,7 @@ case 18:
 
   /* implicit: return the EofToken */
 
-/* line 852 "l_scan.c" */
+/* line 856 "l_scan.c" */
 	    }
 	    if (yyFileStackPtr == yyFileStack) {
 	       l_scan_ResetScanner ();
@@ -857,7 +861,7 @@ case 18:
 	    }
 	    goto yyBegin;
 # else
-/* line 73 "l.rex" */
+/* line 74 "l.rex" */
 
   /* What should be done if the end-of-input-file has been reached? */
 
@@ -877,7 +881,7 @@ case 18:
 
   /* implicit: return the EofToken */
 
-/* line 880 "l_scan.c" */
+/* line 884 "l_scan.c" */
 	    l_scan_ResetScanner ();
 	    return l_scan_EofToken;
 # endif

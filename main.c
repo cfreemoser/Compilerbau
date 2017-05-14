@@ -50,7 +50,10 @@ int main (int argc, char *argv[])
 	printf ("operator_const    : %s\n",l_scan_Attribute.operator_const.Value);
 	break;
       case tok_comment_const:
-	printf ("comment_const    : %s\n",l_scan_Attribute.comment_const.Value);
+	printf ("comment_const \n");
+	break;
+      case tok_begin_const:
+	printf ("begin_const\n");
 	break;
       default: fprintf (stderr, "FATAL ERROR, unknown token\n");
       }

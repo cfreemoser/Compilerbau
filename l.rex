@@ -23,6 +23,7 @@ typedef struct {tPosition Pos; char* Value;} tstring_const;
 typedef struct {tPosition Pos; char* Value;} tidentifier_const;
 typedef struct {tPosition Pos; char* Value;} toperator_const;
 typedef struct {tPosition Pos; char* Value;} tcomment_const;
+typedef struct {tPosition Pos; char* Value;} tbegin_const;
 
 /* There is only one "actual" token, during scanning. Therfore
  * we use a UNION of all token-attributes as data type for that unique
@@ -38,7 +39,6 @@ typedef union {
   tstring_const string_const;
   tidentifier_const identifier_const;
   toperator_const operator_const;
-  tcomment_const comment_const;
 } l_scan_tScanAttribute;
 
 /* Tokens are coded as int's, with values >=0
@@ -50,7 +50,8 @@ typedef union {
 # define tok_identifier_const	4
 # define tok_operator_const	5
 # define tok_comment_const	6
-} // EXPORT
+# define tok_begin_const	7
+}// EXPORT
 
 GLOBAL {
   # include <stdlib.h>
@@ -62,7 +63,7 @@ LOCAL {
  # define MAX_STRING_LEN 2048
   char string [MAX_STRING_LEN+1]; 
   int len;
-  int nestingCount;
+  int nestingCount; /* comments in comments */
 }  // LOCAL
 
 DEFAULT {
@@ -93,14 +94,20 @@ EOF {
 DEFINE  /* some abbreviations */
   digit		= {0-9}       .
   letter	= {a-zA-Z}    .
-  ourWord	= (letter|digit)* .          
+  ourWord	= (letter|digit)* . 
+  B		= {Bb} .
+  E		= {Ee} .
+  G		= {Gg} .
+  I		= {Ii} .
+  N		= {Nn} .
   
 /* define start states, note STD is defined by default, separate several states by a comma */
 /* START STRING */
 START STR, COM
 
 RULE
-/*  */
+/*Keyword Begin  */
+#STD# B E G I N : { return tok_begin_const;}
 
 /* Integers */
 #STD# digit+ :

@@ -26,6 +26,7 @@ typedef struct {tPosition Pos; char* Value;} tstring_const;
 typedef struct {tPosition Pos; char* Value;} tidentifier_const;
 typedef struct {tPosition Pos; char* Value;} toperator_const;
 typedef struct {tPosition Pos; char* Value;} tcomment_const;
+typedef struct {tPosition Pos; char* Value;} tbegin_const;
 
 /* There is only one "actual" token, during scanning. Therfore
  * we use a UNION of all token-attributes as data type for that unique
@@ -41,7 +42,6 @@ typedef union {
   tstring_const string_const;
   tidentifier_const identifier_const;
   toperator_const operator_const;
-  tcomment_const comment_const;
 } l_scan_tScanAttribute;
 
 /* Tokens are coded as int's, with values >=0
@@ -53,8 +53,9 @@ typedef union {
 # define tok_identifier_const	4
 # define tok_operator_const	5
 # define tok_comment_const	6
+# define tok_begin_const	7
 
-/* line 57 "l_scan.h" */
+/* line 58 "l_scan.h" */
 
 # define l_scan_EofToken	0
 # define l_scan_xxMaxCharacter	255
